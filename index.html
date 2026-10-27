@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VALERIUS — Securing Humanity</title>
+<style>
+:root{--bg:#F3F6F4;--paper:#fff;--soft:#E0EEE8;--jade:#2B5754;--ink:#203C3B;--muted:#718782;--line:#DFE8E3;--steel:#203D43;--red:#B85E62}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Pretendard,"Noto Sans KR",Arial,sans-serif;line-height:1.7}button{font:inherit;cursor:pointer}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 26px}.top{position:sticky;top:0;z-index:50;background:#f3f6f4ef;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:13px;font-weight:900;letter-spacing:.12em}.brand small{display:block;font-size:9px;letter-spacing:.16em;color:var(--muted);font-weight:600}.logo{width:43px;height:43px;object-fit:contain;border-radius:10px;background:var(--jade)}.navlinks{display:flex;gap:27px;align-items:center}.navlinks button{border:0;background:transparent;color:var(--ink);font-size:12px;font-weight:700;letter-spacing:.06em;padding:12px 0}.navlinks button.active{color:#2b8b78;border-bottom:2px solid #2b8b78}.menu{display:none;border:1px solid var(--line);background:white;border-radius:10px;padding:8px 13px}.page{display:none}.page.active{display:block}.eyebrow{font-size:11px;letter-spacing:.18em;font-weight:800;color:#568779;text-transform:uppercase}.hero{position:relative;min-height:540px;display:flex;align-items:end;overflow:hidden;background:#203d43;color:white}.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#102c31e8,#102c3160 75%),linear-gradient(0deg,#102c3199,transparent)}.hero-inner{position:relative;z-index:1;width:100%;padding-top:130px;padding-bottom:74px}.hero h1{font-size:clamp(45px,7vw,84px);letter-spacing:-.065em;line-height:1.06;margin:15px 0 25px}.hero p{max-width:550px;color:#d8e7e3;font-size:15px}.btn{display:inline-flex;align-items:center;gap:12px;background:var(--jade);color:white;border:1px solid var(--jade);border-radius:9px;padding:12px 21px;font-size:12px;font-weight:800;margin-top:15px}.btn.outline{background:transparent;border-color:#d4e4df;color:#e9f4f1}.section{padding:95px 0}.section h2{font-size:clamp(29px,4vw,48px);line-height:1.18;letter-spacing:-.045em;margin:12px 0 20px}.lead{max-width:680px;color:#627c75;font-size:15px}.grid{display:grid;gap:20px}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.card{background:white;border:1px solid var(--line);border-radius:17px;overflow:hidden}.card img{width:100%;height:215px;object-fit:cover;display:block;background:#d5e6e2}.card-body{padding:24px}.card h3{font-size:20px;letter-spacing:-.03em;margin:4px 0 10px}.card p{font-size:13px;color:#6b827d;margin:0}.tag{font-size:10px;color:#568779;font-weight:900;letter-spacing:.13em}.dark{background:var(--steel);color:#f3f9f7}.dark .lead,.dark p{color:#c4d9d4}.dark .card{background:#2b4b4d;border-color:#3b5c5d;color:white}.dark .card p{color:#c4d9d4}.dark .tag{color:#a6d9c8}.split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}.split img{width:100%;height:410px;object-fit:cover;border-radius:18px;background:#d5e6e2}.stat{display:flex;gap:24px;flex-wrap:wrap;margin-top:30px}.stat b{display:block;font-size:26px}.stat span{font-size:11px;color:var(--muted)}.chapter{padding:24px 0;border-bottom:1px solid var(--line);background:#e9efed}.chaplinks{display:flex;gap:20px;overflow-x:auto;white-space:nowrap}.chaplinks a{font-size:12px;font-weight:800;color:var(--jade)}.panel{background:var(--soft);border-radius:18px;padding:28px}.steps{display:grid;gap:12px}.step{background:white;border:1px solid var(--line);border-radius:12px;padding:18px 22px;display:flex;gap:18px;align-items:center}.step strong{font-size:12px;color:var(--jade)}.step span{font-size:13px}.warning{border-left:4px solid var(--red);padding:20px 25px;background:#f8eeee;border-radius:0 12px 12px 0;color:#71484b;font-size:13px}.profile{display:grid;grid-template-columns:43% 1fr;gap:0;overflow:hidden;border-radius:22px;background:#203d43;color:white}.profile>img{width:100%;height:100%;min-height:580px;object-fit:cover;object-position:center top;display:block;background:#34585b;align-self:stretch}.profile-info{padding:50px}.profile h2{font-size:clamp(38px,5vw,66px);line-height:1.05;margin:12px 0}.profile p{color:#c6dcd7}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:30px 0}.metric{background:#2e5154;border-radius:10px;padding:18px}.metric small{font-size:10px;color:#a6d9c8;display:block}.metric b{font-size:18px}.quiz-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.quiz-select{background:white;border:1px solid var(--line);border-radius:18px;padding:30px;text-align:left;color:var(--ink)}.form-field{display:flex;flex-direction:column;gap:7px;font-size:12px;font-weight:700;color:var(--jade)}.form-field input,.form-field textarea,.form-field select{width:100%;border:1px solid var(--line);background:#f7faf8;border-radius:10px;padding:13px;color:var(--ink);font:inherit;font-size:14px;outline-color:var(--jade)}.form-field textarea{resize:vertical;min-height:90px}.application{max-width:850px;margin:30px auto;background:white;border:1px solid var(--line);padding:30px;border-radius:18px}.application-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}.application-fields .wide{grid-column:1/-1}.profile-output{white-space:pre-wrap;overflow-wrap:anywhere;background:#e9f2ee;padding:22px;border-radius:12px;font-size:13px;line-height:1.9}.quiz-select:hover{border-color:var(--jade);transform:translateY(-2px)}.quiz-select h3{font-size:23px;margin:14px 0 7px}.quiz-select p{font-size:13px;color:var(--muted)}.quiz{max-width:760px;margin:30px auto;background:white;border:1px solid var(--line);padding:32px;border-radius:18px}.quiz h3{font-size:23px;line-height:1.4}.option{display:block;width:100%;text-align:left;padding:15px 18px;background:#f3f6f4;border:1px solid var(--line);border-radius:10px;margin:10px 0;color:var(--ink)}.option:hover{background:var(--soft);border-color:var(--jade)}.progress{height:5px;background:#e1e9e5;border-radius:20px;overflow:hidden}.progress div{height:100%;background:var(--jade);transition:width .2s}.footer{background:#162d31;color:#c9d9d5;padding:45px 0;font-size:12px}.footer b{font-size:19px;color:white;letter-spacing:.15em}.footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.img-fallback{display:none;padding:18px;background:#d5e6e2;color:#527c73;font-size:12px}.mini{font-size:12px;color:var(--muted)}.result{background:var(--soft);padding:25px;border-radius:15px}.result h2{margin:5px 0}.hidden{display:none!important}
+@media(max-width:800px){.menu{display:block}.nav{height:65px}.navlinks{display:none;position:absolute;top:65px;left:0;right:0;background:var(--bg);padding:15px 26px;flex-direction:column;align-items:stretch;gap:3px;border-bottom:1px solid var(--line)}.navlinks.show{display:flex}.navlinks button{text-align:left}.g3,.g2,.split,.quiz-grid,.profile{grid-template-columns:1fr}.section{padding:65px 0}.hero{min-height:500px}.hero-inner{padding-bottom:55px}.split img{height:280px}.profile>img{height:420px;min-height:0}.profile-info{padding:28px}.card img{height:220px}.quiz,.application{padding:20px}.application-fields{grid-template-columns:1fr}.wrap{padding:0 19px}}
+</style></head><body>
+<header class="top"><div class="wrap nav"><a class="brand" href="#home" data-page="home"><img class="logo" data-img="logo" alt="발레리우스 로고"><span>VALERIUS<small>PHARMACEUTICAL GROUP</small></span></a><button class="menu" id="menuBtn">☰ 메뉴</button><nav class="navlinks" id="navlinks"><button data-page="home" class="active">HOME · 기업 소개</button><button data-page="world">WORLD · 세계관</button><button data-page="hunters">REGISTRY · 헌터</button><button data-page="assessment">ASSESSMENT · 적성 검사</button></nav></div></header>
+<main>
+<div class="page active" id="home">
+<section class="hero"><img data-img="hq" alt="발레리우스 본사"><div class="wrap hero-inner"><div class="eyebrow" style="color:#b0e3d8">VALERIUS PHARMA / GLOBAL NETWORK</div><h1>Securing<br>Humanity.</h1><p>발레리우스 제약은 인류의 지속 가능한 생존을 위해 혁신적인 생명과학 기술과 글로벌 보호 인프라를 제공합니다.</p><button class="btn" data-page="world">우리의 세계 살펴보기 ↗</button></div></section>
+<section class="section"><div class="wrap split"><div><div class="eyebrow">ABOUT VALERIUS</div><h2>생존을 위한 기술.<br>미래를 위한 기준.</h2><p class="lead">발레리우스는 헌터 혈청 개발과 보급, 침식 억제 기술, 페어 적합도 분석, 글로벌 헌터 라이선싱을 연결하는 다국적 생명과학 기업입니다. 인류의 생존을 지원하는 시스템을 구축합니다.</p><div class="stat"><div><b>GLOBAL</b><span>국제 생존 구역 지원망</span></div><div><b>3 CLASSES</b><span>헌터 혈청 적응 유형</span></div></div></div><img data-img="city" alt="도시 전경"></div></section>
+<section class="section" style="background:#e9efed"><div class="wrap"><div class="eyebrow">EXPLORE VALERIUS</div><h2>발레리우스 네트워크</h2><div class="grid g3"><div class="card"><div class="card-body"><div class="tag">01 / WORLD</div><h3>생존의 세계</h3><p>바이러스, 구역 분류, 레버넌트 위협 정보를 확인하십시오.</p><button class="btn" data-page="world">세계관 보기 ↗</button></div></div><div class="card"><div class="card-body"><div class="tag">02 / REGISTRY</div><h3>헌터 등록부</h3><p>공식 등록 헌터의 능력과 활동 정보를 열람하십시오.</p><button class="btn" data-page="hunters">헌터 조회 ↗</button></div></div><div class="card"><div class="card-body"><div class="tag">03 / ASSESSMENT</div><h3>적성 평가</h3><p>헌터 및 페어 프로그램의 가상 적성 검사를 진행하십시오.</p><button class="btn" data-page="assessment">검사 시작 ↗</button></div></div></div></div></section>
+</div>
+<div class="page" id="world"><div class="section" style="padding-bottom:45px"><div class="wrap"><div class="eyebrow">WORLD / OFFICIAL INFORMATION</div><h2>생존의 구조를 이해하다.</h2><p class="lead">레버넌트 바이러스의 확산 이후, 인류는 방어된 도시 구역을 중심으로 삶을 이어가고 있습니다. 발레리우스의 공식 안내 자료를 통해 현재의 생존 체계를 살펴보십시오.</p></div></div><div class="chapter"><div class="wrap chaplinks"><a href="#territories">01 · 바이러스와 구역</a><a href="#revenants">02 · 레버넌트</a><a href="#hunter-program">03 · 헌터 프로그램</a><a href="#erosion">04 · 침식과 페어</a></div></div>
+<section class="section" id="territories"><div class="wrap"><div class="eyebrow">CHAPTER 01 / GLOBAL TERRITORIES</div><h2>세 가지 생존 환경</h2><p class="lead">레버넌트 바이러스가 전 세계로 확산되었습니다. 감염자는 신체의 변이 및 자아 붕괴를 겪게 됩니다. 이에 따라 전 세계는 각 지점에 방호벽을 구축하고 생존자와 레버넌트를 격리했습니다. 방어 시설과 지원 체계에 따라 지역은 크게 세 가지로 분류됩니다. 경계는 지속적으로 변화합니다.</p><div class="grid g3" style="margin-top:35px"><article class="card"><img data-img="safe" alt="안전 구역"><div class="card-body"><div class="tag">SAFE SECTOR</div><h3>생존 구역</h3><p>군과 보안 인프라, 헌터가 보호하는 도시. 의료, 상업, 일상생활이 유지됩니다.</p></div></article><article class="card"><img data-img="gray" alt="회색 지대"><div class="card-body"><div class="tag">GRAY ZONE</div><h3>회색 지대</h3><p>안전 구역과 오염 구역 사이의 분쟁 지역. 제한된 기반 시설과 불규칙한 보호가 특징입니다.</p></div></article><article class="card"><img data-img="dead" alt="위험 구역"><div class="card-body"><div class="tag">DEAD ZONE</div><h3>오염 구역</h3><p>레버넌트가 장악한 지역. 정부 보호와 긴급 지원을 기대하기 어렵습니다.</p></div></article></div></div></section>
+<section class="section dark" id="revenants"><div class="wrap"><div class="eyebrow">THREAT DATABASE</div><h2>레버넌트 위협 분류</h2><p class="lead">감염 후 변이한 인간 개체는 행동과 위험도에 따라 분류됩니다. 동일 등급에서도 능력과 행동 양상은 다를 수 있습니다.</p><div class="grid g3" style="margin-top:35px"><article class="card"><img data-img="low" alt="하급 레버넌트"><div class="card-body"><div class="tag">LOW CLASS</div><h3>하급</h3><p>이성을 상실한 군집성 개체. 폐건물과 지하 통로에서 자주 발견됩니다.</p></div></article><article class="card"><img data-img="mid" alt="중급 레버넌트"><div class="card-body"><div class="tag">MID CLASS</div><h3>중급</h3><p>제한된 지능과 강한 신체 변이를 보이는 개체. 칼날형 사지와 강화 조직 등이 관찰됩니다.</p></div></article><article class="card"><img data-img="high" alt="상급 레버넌트"><div class="card-body"><div class="tag">HIGH CLASS</div><h3>상급</h3><p>인간형 외모, 언어 능력과 복잡한 판단력을 보유하며 생존 구역에 잠입할 수 있습니다.</p></div></article></div></div></section>
+<section class="section" id="hunter-program"><div class="wrap"><div class="eyebrow">CHAPTER 02 / HUNTER PROGRAM</div><div class="split"><div><h2>혈청과 헌터</h2><p class="lead">적격 판정을 받은 지원자는 레버넌트 바이러스로부터 분리해낸 혈청을 일회성으로 투여받습니다. 신체에 통합된 변형 바이러스는 헌터에게 특별한 능력을 부여하지만, 바이러스 활성화와 침식의 위험도 함께 남깁니다.</p><div class="panel" style="margin-top:25px"><b>랭킹 시스템</b><p class="mini">등록된 헌터는 의뢰 난이도, 수행 결과, 작전 신뢰도에 따라 매년 전 세계적으로 평가됩니다. 순위는 계약 기회와 장기 지원 혜택에 영향을 줍니다.</p></div></div><img data-img="serum" alt="혈청"></div><h2 style="margin-top:75px">세 가지 헌터 클래스</h2><div class="grid g3"><article class="card"><img data-img="reinforce" alt="강화계 로고" style="object-fit:contain;padding:28px;background:#e0eee8"><div class="card-body"><div class="tag">REINFORCEMENT</div><h3>강화계</h3><p>근력, 속도, 반사신경, 내구성을 향상시키는 신체 강화 유형. <br> 주 사용 무기: 대검, 건랜스, 전쟁도끼 등 묵직한 화력 또는 너클 등의 속도형 근접 무기. </p></div></article><article class="card"><img data-img="emit" alt="방출계 로고" style="object-fit:contain;padding:28px;background:#e0eee8"><div class="card-body"><div class="tag">EMISSION</div><h3>방출계</h3><p>바이러스 유래 에너지를 외부로 투사하는 원거리 및 탐지 특화 유형. <br>주 사용 무기: 스나이퍼 건, 스로잉 나이프, 석궁 등의 원거리 공격 및 와이어 등 보조 무기.</p></div></article><article class="card"><img data-img="predate" alt="포식계 로고" style="object-fit:contain;padding:28px;background:#e0eee8"><div class="card-body"><div class="tag">PREDATION</div><h3>포식계</h3><p>레버넌트 혈액 흡수로 회복 능력을 발휘하지만, 침식이 급격히 상승할 수 있습니다.<br> 주 사용 무기: 클로, 창, 산탄 무기 등 근접전에 용이하고 제압에 유리한 무기.</p></div></article></div></div></section>
+<section class="section" style="background:#e9efed" id="erosion"><div class="wrap"><div class="eyebrow">CHAPTER 03 / EROSION & PAIRING</div><h2>침식과 안정화</h2><p class="lead">능력 사용과 신체적 부담은 체내 바이러스 활성화를 촉진합니다. 침식은 세 단계로 진행되며, 적절한 안정화 조치가 필요합니다.</p><div class="grid g3" style="margin:32px 0"><div class="card"><div class="card-body"><div class="tag">STAGE 01</div><h3>전조</h3><p>이명, 오한, 감각 이상. 판단력과 자제력은 유지됩니다.</p></div></div><div class="card"><div class="card-body"><div class="tag" style="color:#b78b51">STAGE 02</div><h3>전이</h3><p>시야 적색화, 체온 상승, 공격성 증가와 판단력 저하.</p></div></div><div class="card"><div class="card-body"><div class="tag" style="color:var(--red)">STAGE 03</div><h3>폭주</h3><p>심각한 이성 상실과 포식 충동. 장기화되면 비가역적 변이가 발생할 수 있습니다.</p></div></div></div><div class="split" style="margin-top:55px"><div><div class="eyebrow">PAIR PROGRAM</div><h2>생물학적 적합성의 발견</h2><p class="lead">소수의 인간은 레버넌트 바이러스 활동을 억제하는 자연 항체를 보유합니다. 이러한 면역인은 헌터와 페어를 맺어 물리적 근접 또는 체액의 교환으로 바이러스 침식을 억제할 수 있습니다. 페어 적합도는 헌터와 적격자 사이의 개별 공명 패턴에 따라 결정됩니다.</p></div><div class="panel"><div class="steps"><div class="step"><strong>01</strong><span><b>간접 안정화</b> — 물리적 근접으로 경미한 침식을 억제</span></div><div class="step"><strong>02</strong><span><b>직접 안정화</b> — 항체를 포함한 체액 (타액, 혈액 등) 전달로 바이러스 활동 억제</span></div><div class="step"><strong>03</strong><span><b>합성 안정제</b> — 페어가 없을 때 사용하는 고가의 임시 대체제</span></div></div></div></div><div class="warning" style="margin-top:30px">페어 적합도는 생물학적 수치이며 애정, 의무 또는 동의를 대신하지 않습니다.</div></div></section></div>
+<div class="page" id="hunters"><section class="section"><div class="wrap"><div class="eyebrow">GLOBAL HUNTER REGISTRY / LAS VEGAS SECTOR</div><h2>등록 헌터 정보</h2><p class="lead" style="margin-bottom:35px">발레리우스 라이선스를 보유한 헌터의 공개 등록 기록입니다.</p><div class="profile"><img data-img="w" alt="제이스 와일더"><div class="profile-info"><div class="eyebrow" style="color:#a6d9c8">ACTIVE LICENSE / HUNTER IDENTITY</div><h2>JAYCE<br>WILDER</h2><p>이명 “W” · 라스베가스 섹터</p><div class="metrics"><div class="metric"><small>GLOBAL RANK</small><b>#238</b></div><div class="metric"><small>PRIMARY CLASS</small><b>포식계</b></div><div class="metric"><small>AGE</small><b>29</b></div><div class="metric"><small>COMBAT SPECIALTY</small><b>근접전 · 샷건</b></div></div><div style="margin-top:28px; font-size:13px; line-height:1.9; color:#C6DCD7;">
+  <p>
+    183cm. 짧은 더티블론드와 깊은 갈색 눈동자.
+    넓은 어깨와 발달한 상체를 가진 근접 전투 전문 헌터.
+    근무 외 시간에는 가죽 재킷과 데님을 즐겨 입는다.
+  </p>
+
+  <p style="margin-top:16px;">
+    낙천적이고 사교적인 성향으로, 낯선 사람과도 쉽게 어울린다.
+    격식보다는 농담을 선호하며, 위험한 상황에서도 특유의 여유를 잃지 않는다.
+  </p>
+</div></div></div><div class="grid g2" style="margin-top:25px">
+
+  <!-- 성격 및 대인관계 -->
+  <div class="panel">
+    <div class="tag">PERSONALITY & SOCIAL PROFILE</div>
+    <h3>성격 및 대인관계</h3>
+
+    <p class="mini" style="line-height:1.9;">
+      낙천적이고 사교적인 성향. 농담과 가벼운 도발을 즐기며,
+      처음 만나는 상대에게도 거리낌 없이 다가간다.
+      친밀감 표현에 개방적이고, 사적인 관계에서도
+      대체로 자유롭고 유연한 태도를 유지한다.
+    </p>
+
+    <p class="mini" style="line-height:1.9; margin-top:14px;">
+      긴장된 상황에서도 유머를 잃지 않으며,
+      동료의 상태를 세심하게 살피는 습관이 있다.
+      반면 자신의 부상이나 위험에는 상대적으로 무심한 편이다.
+    </p>
+  </div>
+
+  <!-- 전투 방식 -->
+  <div class="panel">
+    <div class="tag">COMBAT PROFILE</div>
+    <h3>전투 방식</h3>
+
+    <p class="mini" style="line-height:1.9;">
+      <strong>주무장:</strong> 커스텀 펌프액션 산탄총<br>
+      <strong>혈청 계열:</strong> 포식계 (Predation)<br>
+      <strong>전투 특화:</strong> 근거리 교전 / 고기동 전투
+    </p>
+
+    <p class="mini" style="line-height:1.9; margin-top:14px;">
+      산탄총의 반동과 주변 지형을 기동에 활용하며,
+      강한 화력으로 적에게 접근하는 공격적인 전투 방식을 구사한다.
+      적의 혈액을 흡수해 신체를 재생하는 포식계 능력을
+      전술에 적극적으로 반영한다.
+    </p>
+
+    <p class="mini" style="line-height:1.9; margin-top:14px;">
+      높은 전술 적응력과 임무 수행 능력을 보유하고 있으나,
+      위험 감수 성향이 높아 안전 수칙 준수에 대한 개선이 권고된다.
+    </p>
+  </div>
+
+</div><div style="
+  margin-top:25px;
+  padding:32px;
+  background:#203D43;
+  color:#FFFFFF;
+  border-radius:18px;
+">
+
+  <div style="
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:0.15em;
+    color:#A6D9C8;
+  ">
+    HUNTER INTERVIEW / W-238
+  </div>
+
+  <p style="
+    font-size:23px;
+    font-weight:700;
+    line-height:1.5;
+    margin:22px 0 10px;
+  ">
+    “If I can walk out of it, I'd call that a pretty good day.”
+  </p>
+
+  <p style="
+    font-size:13px;
+    color:#C6DCD7;
+    margin-bottom:24px;
+  ">
+    “걸어서 나올 수만 있으면 꽤 괜찮은 하루지.”
+  </p>
+
+  <div style="
+    border-top:1px solid #45666A;
+    padding-top:16px;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    color:#A6D9C8;
+  ">
+    JAYCE WILDER · LAS VEGAS SECTOR
+  </div>
+
+</div></section></div> 
+<div class="page" id="assessment"><section class="section"><div class="wrap"><div class="eyebrow">VALERIUS / PERSONAL ASSESSMENT</div><h2>적성 평가 프로그램</h2><p class="lead">가상의 응답을 바탕으로 캐릭터 프로필 초안을 구성하는 비공식 체험형 검사입니다. 실제 생물학적 적합성을 판정하지 않습니다.</p><div id="quizStart" class="quiz-grid" style="margin-top:40px"><button class="quiz-select" data-quiz="hunter"><div class="eyebrow">01 / HUNTER</div><h3>헌터 적성 검사 ↗</h3><p>전투 판단, 위험 대응, 능력 활용 선호를 통해 강화계·방출계·포식계 중 적합한 유형을 제안합니다.</p></button><button class="quiz-select" type="button" id="openApplication"><div class="eyebrow">02 / APPLICATION</div><h3>지원서 제출 ↗</h3><p>헌터 또는 페어 지원서를 작성하고, RP에 바로 사용할 수 있는 캐릭터 프로필을 생성합니다.</p></button></div><div id="applicationArea" class="application hidden"><div class="eyebrow">VALERIUS / REGISTRATION</div><h2 style="font-size:26px">신규 등록 지원서</h2><p class="mini">작성 내용은 서버에 저장되지 않습니다.</p><div id="applicationChoice" class="quiz-grid" style="margin:24px 0"><button type="button" class="quiz-select" data-app-choice="hunter"><div class="eyebrow">HUNTER APPLICATION</div><h3>헌터 지원 ↗</h3><p>헌터 클래스 및 사용 무기를 포함한 프로필을 작성합니다.</p></button><button type="button" class="quiz-select" data-app-choice="pair"><div class="eyebrow">PAIR APPLICATION</div><h3>페어 지원 ↗</h3><p>기본 정보와 지원 배경을 바탕으로 페어 프로필을 작성합니다.</p></button></div><form id="applicationForm" class="hidden"><div class="application-fields"><label class="form-field wide">지원 유형<select name="type" id="appType"><option value="hunter">헌터 지원</option><option value="pair">페어 지원</option></select></label><label class="form-field">이름<input name="name" placeholder="이름"></label><label class="form-field">나이<input name="age" type="number" min="1" max="999" placeholder="나이"></label><label class="form-field wide">성별<input name="gender" placeholder="성별"></label><label class="form-field wide">외견적 특성<textarea name="appearance" placeholder="키, 체격, 머리색, 눈색, 복장 등"></textarea></label><label class="form-field wide">성격적 특성<textarea name="personality" placeholder="기본 성격, 대인관계, 습관 등"></textarea></label><label class="form-field wide">지원 배경<textarea name="background" placeholder="지원하게 된 이유나 과거"></textarea></label><div id="hunterFields" class="wide application-fields"><label class="form-field">헌터 계열<select name="class"><option value="강화계">강화계</option><option value="방출계">방출계</option><option value="포식계">포식계</option></select></label><label class="form-field">사용 무기<input name="weapon" placeholder="주무기"></label></div></div><p id="formNotice" class="mini" role="status"></p><button class="btn" type="submit">지원서 제출 · 프로필 생성</button><button class="btn" type="button" id="cancelApplication" style="margin-left:10px;background:white;color:#2B5754">돌아가기</button></form><div id="applicationResult" class="hidden"><div class="eyebrow">APPLICATION COMPLETED</div><h3>지원 프로필</h3><div class="profile-output" id="profileOutput"></div><button class="btn" id="copyProfile">전체 복사</button><button class="btn" id="editApplication" style="margin-left:10px;background:white;color:#2B5754">내용 수정</button></div></div><div id="quizArea" class="quiz hidden"><div class="eyebrow" id="quizLabel"></div><div class="progress" style="margin:15px 0 25px"><div id="progressBar"></div></div><div id="quizContent"></div></div></div></section></div>
+</main><footer class="footer"><div class="wrap footrow"><div><b>VALERIUS</b><div>PHARMACEUTICAL GROUP · GLOBAL NETWORK</div></div><div>Securing Humanity.<br><span style="opacity:.6">FICTIONAL CORPORATE ARCHIVE / PROTOTYPE</span></div></div></footer>
+<script>
+const base="https://cdn.jsdelivr.net/gh/luiciemanyx-cpu/assets@main/VELERIUS/";
+const assets={logo:"회사",hq:"본사",city:"구역",safe:"도시",gray:"회색",dead:"위험구역",low:"하급",mid:"중급",high:"상급",serum:"혈청",emit:"방출",predate:"포식",reinforce:"강화",w:"9"};
+// All supplied assets are PNG files.
+document.querySelectorAll("[data-img]").forEach(el=>{
+ const key=el.dataset.img;
+ el.src=base+encodeURIComponent(assets[key])+".png";
+ el.onerror=()=>{el.title="이미지를 불러오지 못했습니다: "+assets[key]+".png";};
+});
+function showPage(page){document.querySelectorAll(".page").forEach(e=>e.classList.toggle("active",e.id===page));document.querySelectorAll("[data-page]").forEach(e=>e.classList.toggle("active",e.dataset.page===page));document.getElementById("navlinks").classList.remove("show");window.scrollTo(0,0);location.hash=page;}
+document.querySelectorAll("[data-page]").forEach(el=>el.addEventListener("click",e=>{e.preventDefault();showPage(el.dataset.page)}));
+document.getElementById("menuBtn").onclick=()=>document.getElementById("navlinks").classList.toggle("show");
+const appArea=document.getElementById("applicationArea"),appForm=document.getElementById("applicationForm"),appResult=document.getElementById("applicationResult");
+let generatedProfile="";
+function openApplication(){document.getElementById("quizStart").classList.add("hidden");document.getElementById("quizArea").classList.add("hidden");appArea.classList.remove("hidden");appForm.classList.add("hidden");document.getElementById("applicationChoice").classList.remove("hidden");appResult.classList.add("hidden");appArea.scrollIntoView({behavior:"smooth",block:"start"});}
+document.getElementById("openApplication").onclick=openApplication;
+document.querySelectorAll("[data-app-choice]").forEach(btn=>btn.addEventListener("click",()=>{
+ const type=btn.dataset.appChoice;
+ document.getElementById("appType").value=type;
+ document.getElementById("hunterFields").classList.toggle("hidden",type!=="hunter");
+ document.getElementById("applicationChoice").classList.add("hidden");
+ appForm.classList.remove("hidden");
+ appForm.scrollIntoView({behavior:"smooth",block:"start"});
+}));
+document.getElementById("appType").onchange=e=>document.getElementById("hunterFields").classList.toggle("hidden",e.target.value!=="hunter");
+document.getElementById("cancelApplication").onclick=()=>{appArea.classList.add("hidden");document.getElementById("quizStart").classList.remove("hidden")};
+appForm.onsubmit=e=>{e.preventDefault();const f=new FormData(appForm);const missing=["name","age","gender","appearance","personality","background"].filter(key=>!String(f.get(key)||"").trim());if(missing.length){const names={name:"이름",age:"나이",gender:"성별",appearance:"외견적 특성",personality:"성격적 특성",background:"지원 배경"};document.getElementById("formNotice").textContent="입력하지 않은 항목: "+missing.map(x=>names[x]).join(", ");appForm.elements[missing[0]].focus();return;}document.getElementById("formNotice").textContent="";const hunter=f.get("type")==="hunter";generatedProfile=["# "+(hunter?"헌터":"페어")+" 지원 프로필","", "## 기본 정보","- 이름: "+f.get("name"),"- 나이: "+f.get("age"),"- 성별: "+f.get("gender"),...(hunter?["- 헌터 계열: "+f.get("class"),"- 사용 무기: "+(f.get("weapon")||"미정")]:[]),"","## 외견적 특성",f.get("appearance"),"","## 성격적 특성",f.get("personality"),"","## 지원 배경",f.get("background")].join("\n");document.getElementById("profileOutput").textContent=generatedProfile;appForm.classList.add("hidden");appResult.classList.remove("hidden");appResult.scrollIntoView({behavior:"smooth",block:"start"});};
+document.getElementById("editApplication").onclick=()=>{appResult.classList.add("hidden");appForm.classList.remove("hidden")};
+document.getElementById("copyProfile").onclick=async()=>{const b=document.getElementById("copyProfile");try{await navigator.clipboard.writeText(generatedProfile);b.textContent="복사 완료"}catch(e){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(document.getElementById("profileOutput"));selection.removeAllRanges();selection.addRange(range);b.textContent="텍스트 선택됨 · 직접 복사하세요"}};
+const quizzes={
+hunter:[
+{q:"위협이 갑자기 나타났습니다. 가장 먼저 취할 행동은?",a:[["직접 접근해 위험을 막는다",0],["거리를 확보하고 상황을 파악한다",1],["상대의 약점을 찾아 기회를 만든다",2]]},
+{q:"가장 선호하는 전투 방식은?",a:[["기동력과 근접 압박",0],["거리와 범위를 통제하는 공격",1],["위험을 감수한 회복과 역습",2]]},
+{q:"예상치 못한 부상이 발생했다면?",a:[["몸을 추스르고 버틴다",0],["엄폐와 지원을 활용한다",1],["자원을 확보해 전투를 이어간다",2]]},
+{q:"팀에서 가장 자신 있는 역할은?",a:[["선두에서 돌파",0],["탐지와 화력 지원",1],["빈틈을 파고드는 유동적 대응",2]]},
+{q:"가장 큰 강점은 무엇인가요?",a:[["끈기와 신체 감각",0],["관찰력과 정확성",1],["순발력과 위험 감수",2]]}
+],
+pair:[
+{q:"파트너가 침식 전조를 보입니다. 당신의 첫 대응은?",a:[["곁에서 상태를 확인한다",0],["증상을 기록하고 도움을 요청한다",1],["필요한 조치를 빠르게 준비한다",2]]},
+{q:"긴급 상황에서 가장 편한 역할은?",a:[["가까이에서 함께 버티기",0],["계획을 조율하고 정보 제공",1],["실질적인 처치와 행동",2]]},
+{q:"상대가 도움을 거부한다면?",a:[["의사를 존중하며 근처에 머문다",0],["위험을 설명하고 선택지를 준다",1],["응급 상황인지 먼저 판단한다",2]]},
+{q:"가장 중시하는 협력 원칙은?",a:[["신뢰와 지속성",0],["정보 공유와 합의",1],["실행력과 즉각적인 대응",2]]},
+{q:"평소에 잘하는 일은?",a:[["꾸준히 곁을 지키기",0],["세부 변화 관찰하기",1],["필요한 물품과 절차 준비하기",2]]}
+]};
+const labels={hunter:["강화계","방출계","포식계"],pair:["공명 지원형","분석 조율형","현장 대응형"]};
+const desc={hunter:["신체 감각과 지속적인 압박에 강점을 보이는 헌터 유형입니다. 근접 전투, 전위 포지션 및 직접 전투에 유리합니다.","관찰과 거리 통제, 전략적 지원에 강점을 보이는 헌터 유형입니다. 원거리 전투, 범위 지원, 서포팅에 유리합니다.","기회 포착과 고위험 대응에 강점을 보이는 헌터 유형입니다. 포식을 통한 근접 전투, 고위험 구역 정찰에 유리합니다."],pair:["지속적인 동행과 신뢰 구축을 중시하는 페어 유형입니다.","상태 관찰과 정보 공유, 선택지 조율을 중시하는 페어 유형입니다.","긴급 처치와 실질적 대응을 중시하는 페어 유형입니다."]};
+let kind="hunter",idx=0,scores=[0,0,0];const area=document.getElementById("quizArea"),content=document.getElementById("quizContent");
+document.querySelectorAll("[data-quiz]").forEach(b=>b.onclick=()=>{appArea.classList.add("hidden");kind=b.dataset.quiz;idx=0;scores=[0,0,0];document.getElementById("quizStart").classList.add("hidden");area.classList.remove("hidden");renderQuiz();area.scrollIntoView({behavior:"smooth",block:"start"});});
+function renderQuiz(){document.getElementById("quizLabel").textContent=(kind==="hunter"?"HUNTER":"PAIR")+" / QUESTION "+(idx+1)+" OF "+quizzes[kind].length;document.getElementById("progressBar").style.width=(idx/quizzes[kind].length*100)+"%";const q=quizzes[kind][idx];content.replaceChildren();const h=document.createElement("h3");h.textContent=q.q;content.append(h);q.a.forEach(([answer,value])=>{const b=document.createElement("button");b.className="option";b.textContent=answer;b.onclick=()=>{scores[value]++;idx++;idx<quizzes[kind].length?renderQuiz():renderResult();};content.append(b)});}
+function renderResult(){document.getElementById("progressBar").style.width="100%";const max=Math.max(...scores);const result=scores.indexOf(max);const name=labels[kind][result];const message=desc[kind][result];content.innerHTML="";const div=document.createElement("div");div.className="result";const k=document.createElement("div");k.className="eyebrow";k.textContent="ASSESSMENT RESULT";const h=document.createElement("h2");h.textContent=name;const p=document.createElement("p");p.textContent=message;const note=document.createElement("p");note.className="mini";note.textContent=kind==="pair"?"이 결과는 역할 성향 제안이며 항체 보유 여부나 특정 헌터와의 생물학적 적합도를 판정하지 않습니다.":"이 결과는 캐릭터 설정을 위한 전투 성향 제안이며 실제 혈청 적응을 판정하지 않습니다.";div.append(k,h,p,note);const copy=document.createElement("button");copy.className="btn";copy.textContent="결과 복사";copy.onclick=()=>navigator.clipboard?.writeText("VALERIUS 적성 평가\n"+name+"\n"+message).then(()=>copy.textContent="복사 완료").catch(()=>copy.textContent="복사할 수 없습니다");const again=document.createElement("button");again.className="btn";again.style.marginLeft="10px";again.style.background="#fff";again.style.color="#2B5754";again.textContent="다시 검사";again.onclick=()=>{area.classList.add("hidden");document.getElementById("quizStart").classList.remove("hidden")};content.append(div,copy,again);}
+if(["home","world","hunters","assessment"].includes(location.hash.slice(1)))showPage(location.hash.slice(1));
+</script></body></html>
